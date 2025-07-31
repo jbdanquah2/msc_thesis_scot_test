@@ -1,0 +1,12 @@
+# Input: s: string
+# Output: string (reverse of s)
+# 1: set result to empty string
+# 2: for i from length of s minus 1 down to 0 do
+# 3:     append s[i] to result
+# 4: return result
+### Final Code
+def reverse_string(s: str) -> str:
+    result = ""
+    for i in range(len(s) - 1, -1, -1):
+        result += s[i]
+    return result

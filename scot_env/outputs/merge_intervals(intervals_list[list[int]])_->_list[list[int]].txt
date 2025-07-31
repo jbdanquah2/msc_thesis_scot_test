@@ -1,0 +1,29 @@
+# Input: intervals: list of lists of integers [start, end]
+# Output: list of merged intervals
+# 1: if intervals is empty then
+# 2:     return empty list
+# 3: sort intervals based on start time
+# 4: initialize merged list with the first interval
+# 5: for each interval from the second to the last in intervals do
+# 6:     set last_merged to the last interval in merged list
+# 7:     if current interval start <= last_merged end then
+# 8:         merge by setting last_merged end = max(last_merged end, current interval end)
+# 9:     else
+# 10:        append current interval to merged list
+# 11: return merged list
+# Final Code
+def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
+    if not intervals:
+        return []
+
+    intervals.sort(key=lambda x: x[0])
+    merged = [intervals[0]]
+
+    for current in intervals[1:]:
+        last_merged = merged[-1]
+        if current[0] <= last_merged[1]:
+            last_merged[1] = max(last_merged[1], current[1])
+        else:
+            merged.append(current)
+
+    return merged
