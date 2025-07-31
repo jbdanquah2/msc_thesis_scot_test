@@ -1,6 +1,4 @@
-Here’s a complete **README.md** for your GitHub repository, with a table and flowchart included:
 
----
 
 # 🧠 Structured Chain-of-Thought (SCoT) Code Generation
 
