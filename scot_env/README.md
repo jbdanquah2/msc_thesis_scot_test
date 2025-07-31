@@ -130,6 +130,4 @@ python cot_prompting.py
   * Compute unbiased **Pass\@k** scores.
   * Optionally, perform robustness and ablation studies.
 
----
 
-Would you like me to also add a **section with example commands** for running Pass\@k evaluation scripts (e.g., `human_eval_unbiased_passk_test.py`)?
