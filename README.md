@@ -36,8 +36,8 @@ These scripts can be used to reproduce the SCoT methodology or compare prompting
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-link>
-cd <your-repo-name>
+git clone <https://github.com/jbdanquah2/msc_thesis_scot_testk>
+cd <msc_thesis_scot_testk>
 ```
 
 ### 2. Install dependencies
