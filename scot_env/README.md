@@ -33,7 +33,7 @@ pip install openai datasets
 ```
 
 ### 3. Set your OpenAI API key
-
+API key can be found in the openAIK.txt file
 ```bash
 export OPENAI_API_KEY="your_api_key_here"
 ```
