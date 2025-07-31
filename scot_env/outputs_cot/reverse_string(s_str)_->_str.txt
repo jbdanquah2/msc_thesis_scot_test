@@ -1,5 +1,6 @@
 ### Reasoning
-To reverse a string, we can simply use string slicing with a step of -1. This will create a new string with the characters in reverse order.
+To reverse a string, we can use slicing in Python. 
+We can use the following syntax to reverse a string: s[::-1].
 
 ### Final Code
 ```python

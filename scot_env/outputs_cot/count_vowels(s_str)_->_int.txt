@@ -1,13 +1,15 @@
 ### Reasoning
-To count the number of vowels in a given string, I will iterate through each character in the string and check if it is a vowel (a, e, i, o, u). If it is, I will increment a counter variable. Finally, I will return the counter variable as the result.
+I will start by defining a function that takes a string as input and returns the count of vowels in the string. I will initialize a variable to count the vowels and then iterate through the string to check each character. If the character is a vowel (a, e, i, o, u), I will increment the count. Finally, I will return the count of vowels.
 
 ### Final Code
 ```python
 def count_vowels(s: str) -> int:
-    vowels = "aeiou"
+    """
+    Return the number of vowels (a, e, i, o, u) in the given string.
+    """
     count = 0
     for char in s:
-        if char.lower() in vowels:
+        if char.lower() in ['a', 'e', 'i', 'o', 'u']:
             count += 1
     return count
 ```

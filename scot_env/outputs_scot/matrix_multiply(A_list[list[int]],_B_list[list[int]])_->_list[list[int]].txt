@@ -1,24 +1,27 @@
 
-    # Input: A, B: list of lists of integers
-    # Output: list of lists of integers (product of A and B)
-    # 1: set rows_A to number of rows in A
-    # 2: set cols_A to number of columns in A
-    # 3: set cols_B to number of columns in B
-    # 4: initialize result as a matrix of size rows_A x cols_B filled with zeros
-    # 5: for i from 0 to rows_A - 1 do
-    # 6:     for j from 0 to cols_B - 1 do
-    # 7:         for k from 0 to cols_A - 1 do
-    # 8:             result[i][j] += A[i][k] * B[k][j]
-    # 9: return result
-    ### Final Code
+# Input: A: list of lists of integers, B: list of lists of integers
+# Output: list of lists of integers (product of A and B)
+
+# 1: set row_count_A to the number of rows in A
+# 2: set col_count_A to the number of columns in A
+# 3: set col_count_B to the number of columns in B
+# 4: initialize result to a zero matrix of dimensions row_count_A x col_count_B
+# 5: for i from 0 to row_count_A do
+# 6:     for j from 0 to col_count_B do
+# 7:         for k from 0 to col_count_A do
+# 8:             result[i][j] += A[i][k] * B[k][j]
+# 9: return result
+
 def matrix_multiply(A: list[list[int]], B: list[list[int]]) -> list[list[int]]:
-    rows_A, cols_A = len(A), len(A[0])
-    cols_B = len(B[0])
-    result = [[0 for _ in range(cols_B)] for _ in range(rows_A)]
-
-    for i in range(rows_A):
-        for j in range(cols_B):
-            for k in range(cols_A):
+    row_count_A = len(A)
+    col_count_A = len(A[0])
+    col_count_B = len(B[0])
+    
+    result = [[0 for _ in range(col_count_B)] for _ in range(row_count_A)]
+    
+    for i in range(row_count_A):
+        for j in range(col_count_B):
+            for k in range(col_count_A):
                 result[i][j] += A[i][k] * B[k][j]
-
+    
     return result

@@ -30,7 +30,6 @@ def generate_multiple_samples(prompt: str, model: str, n: int = 20) -> List[str]
     for _ in range(n):
         output = call_model(prompt, model_name=model, max_tokens=512)
         responses.append(output)
-        print(output, "\n\n")
 
     return responses
 

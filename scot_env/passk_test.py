@@ -1,8 +1,6 @@
 import os
-import openai
 from typing import List, Dict, Callable
 import traceback
-import _scot_prompting
 from _scot_prompting import code_examples, create_scot_prompt, call_model
 
 

@@ -1,24 +1,21 @@
 ### Reasoning
-To multiply two matrices A and B, we need to follow the matrix multiplication rules. The number of columns in matrix A must be equal to the number of rows in matrix B in order to perform multiplication.
-
-We will initialize a result matrix with dimensions equal to the number of rows in A and the number of columns in B. Then, we will iterate through the rows of A and the columns of B, multiplying and summing the corresponding elements to populate the result matrix.
+To multiply two matrices A and B, we need to ensure that the number of columns in matrix A is equal to the number of rows in matrix B. Once we have validated the dimensions, we can then perform the multiplication by iterating through the elements of the matrices and calculating the dot product of the corresponding rows and columns.
 
 ### Final Code
 ```python
 def matrix_multiply(A: list[list[int]], B: list[list[int]]) -> list[list[int]]:
-    # Get dimensions of matrices
-    rows_A = len(A)
-    cols_A = len(A[0])
-    cols_B = len(B[0])
-    
-    # Initialize result matrix with zeros
-    result = [[0 for _ in range(cols_B)] for _ in range(rows_A)]
-    
+    # Validate dimensions for multiplication
+    if len(A[0]) != len(B):
+        raise ValueError("Invalid dimensions for matrix multiplication")
+
+    # Initialize result matrix with dimensions of rows of A and columns of B
+    result = [[0 for _ in range(len(B[0]))] for _ in range(len(A))]
+
     # Perform matrix multiplication
-    for i in range(rows_A):
-        for j in range(cols_B):
-            for k in range(cols_A):
+    for i in range(len(A)):
+        for j in range(len(B[0])):
+            for k in range(len(B)):
                 result[i][j] += A[i][k] * B[k][j]
-    
+
     return result
 ```

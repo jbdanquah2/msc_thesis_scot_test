@@ -1,5 +1,5 @@
 def matrix_multiply(A: list[list[int]], B: list[list[int]]) -> list[list[int]]:
-    result = [[0 for _ in range(len(B[0]))] for _ in range(len(A))]
+    result = [[0 for j in range(len(B[0]))] for i in range(len(A))]
     for i in range(len(A)):
         for j in range(len(B[0])):
             for k in range(len(B)):
