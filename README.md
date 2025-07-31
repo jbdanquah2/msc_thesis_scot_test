@@ -104,12 +104,12 @@ python cot_prompting.py
 
 ## 🧭 Choosing Which Script to Run
 
-| Script                   | Prompting Type                         | When to Use                                                      | Output Folder        |
-| ------------------------ | -------------------------------------- | ---------------------------------------------------------------- | -------------------- |
-| `scorm_prompting.py`     | **SCoT** (Structured Chain-of-Thought) | Main methodology. Structured reasoning with IO, branches, loops. | `outputs/`           |
-| `zero_shot_prompting.py` | Zero-shot                              | Baseline: Directly asks for solution with no examples.           | `outputs_zero_shot/` |
-| `few_shot_prompting.py`  | Few-shot                               | Baseline: Uses code examples to guide the solution.              | `outputs_few_shot/`  |
-| `cot_prompting.py`       | Chain-of-Thought                       | Baseline: Natural language step-by-step reasoning.               | `outputs_cot/`       |
+| Script                    | Prompting Type                         | When to Use                                                      | Output Folder        |
+|---------------------------| -------------------------------------- | ---------------------------------------------------------------- | -------------------- |
+| `_scot_prompting.py`      | **SCoT** (Structured Chain-of-Thought) | Main methodology. Structured reasoning with IO, branches, loops. | `outputs/`           |
+| `_zero_shot_prompting.py` | Zero-shot                              | Baseline: Directly asks for solution with no examples.           | `outputs_zero_shot/` |
+| `_few_shot_prompting.py`  | Few-shot                               | Baseline: Uses code examples to guide the solution.              | `outputs_few_shot/`  |
+| `_cot_prompting.py`       | Chain-of-Thought                       | Baseline: Natural language step-by-step reasoning.               | `outputs_cot/`       |
 
 ---
 
