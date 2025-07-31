@@ -4,6 +4,7 @@ from typing import List, Dict
 import math
 import subprocess
 import tempfile
+from concurrent.futures import ThreadPoolExecutor
 from scot_prompting import code_examples, create_scot_prompt, call_model
 
 
@@ -29,6 +30,8 @@ def generate_multiple_samples(prompt: str, model: str, n: int = 20) -> List[str]
     for _ in range(n):
         output = call_model(prompt, model_name=model, max_tokens=512)
         responses.append(output)
+        print(output, "\n\n")
+
     return responses
 
 
@@ -74,15 +77,18 @@ if __name__ == "__main__":
     dataset = load_dataset("mbpp", split="test")
     tasks = [format_mbpp_task(row) for row in dataset]
 
+    # Reduce the number of tasks for faster testing
+    tasks = tasks[:20]  # for faster testing, comment this line out for full evaluation
+
     total_tasks = len(tasks)
     pass1_count, pass3_scores, pass5_scores = 0, [], []
 
     for i, task in enumerate(tasks):
-        print(f"Task {i + 1}/{total_tasks}: {task['signature']}")
+        print(f":::Task {i + 1}/{total_tasks}: {task['signature']}")
         prompt = create_scot_prompt(task, code_examples)
 
         # Generate 20 samples
-        samples = generate_multiple_samples(prompt, model, n=20)
+        samples = generate_multiple_samples(prompt, model, n=2) # reduced to 2 for faster testing, should be increased to 20 for full evaluation
         successes = sum(run_generated_code(extract_code(sample), task["test_code"]) for sample in samples)
 
         # Pass@1
