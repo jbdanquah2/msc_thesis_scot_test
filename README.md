@@ -8,10 +8,10 @@ This repository provides scripts to replicate **Structured Chain-of-Thought (SCo
 
 ## 📂 Repository Contents
 
-* `scorm_prompting.py` → **SCoT prompting** (structured reasoning with IO, branches, loops).
-* `zero_shot_prompting.py` → Baseline Zero-shot prompting.
-* `few_shot_prompting.py` → Baseline Few-shot prompting.
-* `cot_prompting.py` → Baseline Chain-of-Thought prompting.
+* `_scot_prompting.py` → **SCoT prompting** (structured reasoning with IO, branches, loops).
+* `_zero_shot_prompting.py` → Baseline Zero-shot prompting.
+* `_few_shot_prompting.py` → Baseline Few-shot prompting.
+* `_cot_prompting.py` → Baseline Chain-of-Thought prompting.
 * `outputs/` → SCoT generated code solutions.
 * `outputs_zero_shot/`, `outputs_few_shot/`, `outputs_cot/` → Baseline results.
 
