@@ -111,11 +111,6 @@ python cot_prompting.py
 | `_few_shot_prompting.py`  | Few-shot                               | Baseline: Uses code examples to guide the solution.              | `outputs_few_shot/`  |
 | `_cot_prompting.py`       | Chain-of-Thought                       | Baseline: Natural language step-by-step reasoning.               | `outputs_cot/`       |
 
----
-
-## 📊 Prompting Flowchart
-
-![Prompting Scripts Overview](Prompting_Scripts_Overview.png)
 
 ---
 
