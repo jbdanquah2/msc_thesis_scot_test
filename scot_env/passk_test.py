@@ -26,7 +26,6 @@ def generate_multiple_samples(prompt: str, model: str, n: int = 5) -> List[str]:
         responses.append(output)
     return responses
 
-
 # ----------------- UNIT TESTS -----------------
 
 def test_reverse_string(env):
