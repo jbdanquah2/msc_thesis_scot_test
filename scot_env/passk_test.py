@@ -2,8 +2,8 @@ import os
 import openai
 from typing import List, Dict, Callable
 import traceback
-import scot_prompting
-from scot_prompting import code_examples, create_scot_prompt, call_model
+import _scot_prompting
+from _scot_prompting import code_examples, create_scot_prompt, call_model
 
 
 # ---------------- PASS@k TESTING ---------------

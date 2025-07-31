@@ -1,0 +1,11 @@
+### Reasoning
+To reverse a string, we can simply use string slicing with a step of -1. This will create a new string with the characters in reverse order.
+
+### Final Code
+```python
+def reverse_string(s: str) -> str:
+    """
+    Return the reverse of the given string.
+    """
+    return s[::-1]
+```

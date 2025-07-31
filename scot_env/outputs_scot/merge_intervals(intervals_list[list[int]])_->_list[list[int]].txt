@@ -11,7 +11,7 @@
 # 9:     else
 # 10:        append current interval to merged list
 # 11: return merged list
-# Final Code
+### Final Code
 def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
     if not intervals:
         return []

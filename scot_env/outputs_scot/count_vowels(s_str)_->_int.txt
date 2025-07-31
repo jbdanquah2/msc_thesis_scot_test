@@ -1,0 +1,15 @@
+
+    # Input: s: string
+    # Output: integer (number of vowels in the string)
+    # 1: initialize count to 0
+    # 2: for each character c in s do
+    # 3:     if c is 'a' or 'e' or 'i' or 'o' or 'u' then
+    # 4:         increment count by 1
+    # 5: return count
+    ### Final Code
+def count_vowels(s: str) -> int:
+    count = 0
+    for c in s:
+        if c in ['a', 'e', 'i', 'o', 'u']:
+            count += 1
+    return count

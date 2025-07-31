@@ -4,7 +4,7 @@ from typing import List, Dict, Callable
 import math
 import subprocess
 import tempfile
-from scot_prompting import code_examples, create_scot_prompt, call_model
+from _scot_prompting import code_examples, create_scot_prompt, call_model
 
 # ----------------- Helper Functions -----------------
 

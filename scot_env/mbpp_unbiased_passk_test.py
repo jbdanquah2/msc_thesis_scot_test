@@ -5,7 +5,7 @@ import math
 import subprocess
 import tempfile
 from concurrent.futures import ThreadPoolExecutor
-from scot_prompting import code_examples, create_scot_prompt, call_model
+from _scot_prompting import code_examples, create_scot_prompt, call_model
 
 
 # ----------------- Helper Functions -----------------

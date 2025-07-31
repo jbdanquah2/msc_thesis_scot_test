@@ -1,0 +1,12 @@
+# Input: s: string
+# Output: string (reverse of the given string)
+# 1: set result to empty string
+# 2: for each character c from last to first in s do
+# 3:     append c to result
+# 4: return result
+### Final Code
+def reverse_string(s: str) -> str:
+    result = ""
+    for c in s[::-1]:
+        result += c
+    return result

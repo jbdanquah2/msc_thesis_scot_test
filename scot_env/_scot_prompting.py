@@ -180,8 +180,8 @@ def call_model(prompt: str, model_name: str = "gpt-3.5-turbo-1106", max_tokens: 
 # ----------------- Save Output -----------------
 
 def save_output(task_signature: str, output: str):
-    os.makedirs("outputs", exist_ok=True)
-    filename = f"outputs/{task_signature.replace(' ', '_').replace(':', '')}.txt"
+    os.makedirs("outputs_scot", exist_ok=True)
+    filename = f"outputs_scot/{task_signature.replace(' ', '_').replace(':', '')}.txt"
     with open(filename, "w") as f:
         f.write(output)
 
