@@ -63,7 +63,7 @@ export OPENAI_API_KEY="your_api_key_here"
 Structured reasoning before code generation:
 
 ```bash
-python scorm_prompting.py
+python _scot_prompting.py
 ```
 
 * Uses structured reasoning.
@@ -74,7 +74,7 @@ python scorm_prompting.py
 No examples, direct solution:
 
 ```bash
-python zero_shot_prompting.py
+python _zero_shot_prompting.py
 ```
 
 * Saves results to `outputs_zero_shot/`.
@@ -84,7 +84,7 @@ python zero_shot_prompting.py
 Uses examples to guide code style:
 
 ```bash
-python few_shot_prompting.py
+python _few_shot_prompting.py
 ```
 
 * Saves results to `outputs_few_shot/`.
@@ -94,7 +94,7 @@ python few_shot_prompting.py
 Plain step-by-step reasoning:
 
 ```bash
-python cot_prompting.py
+python _cot_prompting.py
 ```
 
 * Saves results to `outputs_cot/`.
